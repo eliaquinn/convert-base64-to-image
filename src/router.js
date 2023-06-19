@@ -1,5 +1,6 @@
 const express = require("express")
 const sss = require("./services/base64converter")
+const path = require("path")
 const renderImage = require("./services/imageviewer")
 const rt = express.Router()
 
@@ -17,7 +18,7 @@ rt.post("/base64converter", (req, res) => {
 
   res.send({
     msg: "Sua imagem foi convertida com sucesso!",
-    link: `${process.env.HOST}/imageviewer/${filename}.png`,
+    link: `http://localhost:3000/imageviewer/${filename}.png`,
   })
 })
 
