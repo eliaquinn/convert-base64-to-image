@@ -8,6 +8,6 @@ const app = express()
 app.use(cors())
 app.use(express.json({ limit: "7mb" }))
 
-app.use("/", routes)
+app.use(routes)
 
 app.listen(port)
